@@ -1,0 +1,315 @@
+:root {
+	--sl-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--sl-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+	--book-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+	--sl-color-white: #fafafa;
+	--sl-color-black: #111111;
+	--sl-color-accent-low: #f1e3d0;
+	--sl-color-accent: #7b1f31;
+	--sl-color-accent-high: #3b0d17;
+	--sl-color-gray-1: #f7f2ea;
+	--sl-color-gray-2: #ece4d8;
+	--sl-color-gray-3: #d8cdbd;
+	--sl-color-gray-4: #8d8171;
+	--sl-color-gray-5: #5c554b;
+	--sl-color-gray-6: #2d2924;
+	--sl-color-gray-7: #171513;
+	--book-gold: #aa7a2a;
+	--book-maroon: #7b1f31;
+	--book-ink: #111111;
+	--book-paper: #fafafa;
+	--sl-content-width: 48rem;
+	--sl-sidebar-width: 18rem;
+}
+
+:root[data-theme="dark"] {
+	--sl-color-white: #f7efe4;
+	--sl-color-black: #11100e;
+	--sl-color-accent-low: #31131a;
+	--sl-color-accent: #d6a955;
+	--sl-color-accent-high: #f4dfb4;
+	--sl-color-gray-1: #f2eadf;
+	--sl-color-gray-2: #d5c8b8;
+	--sl-color-gray-3: #aa9b89;
+	--sl-color-gray-4: #817565;
+	--sl-color-gray-5: #51483d;
+	--sl-color-gray-6: #2a2520;
+	--sl-color-gray-7: #171310;
+	--book-gold: #d6a955;
+	--book-maroon: #d7798a;
+	--book-ink: #f7efe4;
+	--book-paper: #11100e;
+}
+
+html {
+	background: var(--book-paper);
+}
+
+body {
+	background:
+		linear-gradient(90deg, color-mix(in srgb, var(--book-maroon), transparent 93%), transparent 28rem),
+		var(--book-paper);
+	color: var(--book-ink);
+	letter-spacing: 0;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0 auto auto 0;
+	z-index: 9999;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, var(--book-maroon), var(--book-gold));
+	transform: scaleX(0);
+	transform-origin: left center;
+}
+
+@supports (animation-timeline: scroll()) {
+	body::before {
+		animation: reading-progress linear both;
+		animation-timeline: scroll(root);
+	}
+}
+
+@keyframes reading-progress {
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.sl-markdown-content {
+	font-family: var(--book-serif);
+	font-size: clamp(1.06rem, calc(1rem + 0.18rem), 1.18rem);
+	line-height: 1.85;
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li {
+	color: color-mix(in srgb, var(--book-ink), transparent 12%);
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content th,
+.sl-markdown-content .chapter-kicker,
+.home-kicker,
+.home-lede,
+.hero-actions,
+.method-map,
+.reading-path,
+.evidence-grid {
+	font-family: var(--sl-font);
+}
+
+.sl-markdown-content h1 {
+	max-width: 13ch;
+	font-size: clamp(3rem, calc(3rem + 1.6rem), 4.6rem);
+	line-height: 0.98;
+	letter-spacing: 0;
+}
+
+.sl-markdown-content h2 {
+	margin-top: 3.2rem;
+	padding-top: 0.4rem;
+	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 62%);
+	font-size: clamp(1.45rem, calc(1.35rem + 0.25rem), 1.75rem);
+	letter-spacing: 0;
+}
+
+.sl-markdown-content blockquote {
+	margin: 2rem 0;
+	border-inline-start: 4px solid var(--book-maroon);
+	background: color-mix(in srgb, var(--book-maroon), transparent 95%);
+	color: var(--book-ink);
+	font-family: var(--book-serif);
+	font-size: clamp(1.3rem, calc(1.18rem + 0.28rem), 1.55rem);
+	line-height: 1.55;
+}
+
+.sl-markdown-content hr {
+	margin: 2.8rem 0 0;
+	border: 0;
+	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 72%);
+}
+
+.chapter-kicker,
+.home-kicker {
+	margin: 0 0 1rem;
+	color: var(--book-maroon);
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.home-lede {
+	max-width: 22ch;
+	margin: 0.75rem 0 1.25rem;
+	color: var(--book-ink);
+	font-size: 2.75rem;
+	font-weight: 720;
+	line-height: 1.08;
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 1.6rem 0 2.8rem;
+}
+
+.hero-actions a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 2.7rem;
+	padding: 0.55rem 0.9rem;
+	border: 1px solid color-mix(in srgb, var(--book-maroon), transparent 50%);
+	border-radius: 6px;
+	color: var(--book-maroon);
+	font-size: 0.92rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.hero-actions a:first-child {
+	background: var(--book-maroon);
+	color: #fff8ef;
+}
+
+.method-map {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1px;
+	margin: 2rem 0 4rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 48%);
+	background: color-mix(in srgb, var(--book-gold), transparent 70%);
+}
+
+.method-map a,
+.reading-path a,
+.evidence-grid section {
+	background: color-mix(in srgb, var(--book-paper), var(--book-gold) 4%);
+	text-decoration: none;
+}
+
+.method-map a {
+	display: grid;
+	gap: 0.55rem;
+	min-height: 11.5rem;
+	padding: 1rem;
+	color: var(--book-ink);
+}
+
+.method-map span,
+.reading-path span,
+.evidence-grid span {
+	color: var(--book-gold);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.method-map strong {
+	align-self: end;
+	font-size: 1.45rem;
+	line-height: 1;
+}
+
+.method-map small,
+.reading-path small {
+	color: color-mix(in srgb, var(--book-ink), transparent 28%);
+	font-size: 0.86rem;
+	line-height: 1.45;
+}
+
+.reading-path {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 1.3rem 0 3rem;
+}
+
+.reading-path a {
+	display: grid;
+	gap: 0.35rem;
+	min-height: 8rem;
+	padding: 1rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
+	border-radius: 6px;
+	color: var(--book-ink);
+}
+
+.reading-path strong {
+	font-size: 1.1rem;
+	line-height: 1.25;
+}
+
+.evidence-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 2rem 0 3rem;
+}
+
+.evidence-grid section {
+	padding: 1rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 55%);
+	border-radius: 6px;
+}
+
+.evidence-grid h2 {
+	margin: 0.35rem 0 0.65rem;
+	padding: 0;
+	border: 0;
+	font-size: 1.05rem;
+}
+
+.evidence-grid p {
+	margin: 0.5rem 0;
+	font-family: var(--book-serif);
+	font-size: 0.98rem;
+	line-height: 1.65;
+}
+
+.evidence-grid details {
+	margin-top: 0.9rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 68%);
+}
+
+.evidence-grid summary {
+	cursor: pointer;
+	color: var(--book-maroon);
+	font-size: 0.86rem;
+	font-weight: 800;
+}
+
+@media (max-width: 780px) {
+	body {
+		background: var(--book-paper);
+	}
+
+	.sl-markdown-content h1 {
+		max-width: 11ch;
+		font-size: 3rem;
+	}
+
+	.method-map,
+	.reading-path,
+	.evidence-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-lede {
+		max-width: 100%;
+		font-size: 2.25rem;
+	}
+
+	.method-map a {
+		min-height: 8.5rem;
+	}
+}
