@@ -101,6 +101,8 @@ The factory.
 
 Every institution becomes another piece of evidence.
 
+<p class="evidence-note"><a href="/appendices/evidence-matrix/#chapter-2">Evidence note: sources for Anna’s institutional map</a></p>
+
 By itself, each fact appears ordinary.
 
 Together they reveal a pattern.
@@ -240,6 +242,8 @@ Not balance-sheet economics.
 His objective was to expose structures of dependence.
 
 The institutional evidence served that objective.
+
+<p class="evidence-note"><a href="/appendices/evidence-matrix/#chapter-2">See the Evidence Matrix for the chapter’s principal sources</a></p>
 
 ---
 

@@ -15,12 +15,73 @@ tableOfContents: false
 	</div>
 </section>
 
-<div class="progression" aria-label="The movement of the book's central question">
-	<span>Dignity</span>
-	<span>Ownership</span>
-	<span>Opportunity</span>
-	<span>Innovation</span>
-	<span>?</span>
+<div class="continue-reading" data-continue-reading hidden></div>
+
+<section class="thesis-diagram" aria-labelledby="thesis-diagram-title">
+	<p class="home-kicker">The recurring obligation</p>
+	<h2 id="thesis-diagram-title">Each generation asks what has become concentrated.</h2>
+	<div class="thesis-flow" aria-label="Dignity to ownership to access to knowledge and innovation">
+		<span><strong>Dignity</strong><small>Periyar</small></span>
+		<span><strong>Ownership</strong><small>Anna</small></span>
+		<span><strong>Access</strong><small>Kalaignar</small></span>
+		<span><strong>Knowledge / Innovation</strong><small>Now</small></span>
+	</div>
+	<p>The answer changes. The responsibility does not.</p>
+</section>
+
+## Reading Path
+
+<div class="reading-path">
+	<a href="/book/preface/">
+		<span>Opening</span>
+		<strong>Preface</strong>
+		<small>The recurring question at the heart of the work.</small>
+	</a>
+	<a href="/book/introduction/">
+		<span>Opening</span>
+		<strong>Introduction</strong>
+		<small>The question behind a century of public action.</small>
+	</a>
+	<a href="/book/01-recurring-obligation/">
+		<span>Chapter 1</span>
+		<strong>A Recurring Obligation</strong>
+		<small>The pattern across Periyar, Anna, and Kalaignar.</small>
+	</a>
+	<a href="/book/02-annas-question/">
+		<span>Chapter 2</span>
+		<strong>Anna’s Question</strong>
+		<small>Ownership as an institutional investigation.</small>
+	</a>
+	<a href="/book/03-after-access/">
+		<span>Chapter 3</span>
+		<strong>After Access</strong>
+		<small>Why educational success made ownership more interesting.</small>
+	</a>
+	<a href="/book/04-ownership-ecosystem/">
+		<span>Chapter 4</span>
+		<strong>Ownership as Ecosystem</strong>
+		<small>Networks, capital, knowledge, and trust.</small>
+	</a>
+	<a href="/book/05-innovation-architecture/">
+		<span>Chapter 5</span>
+		<strong>Innovation Architecture</strong>
+		<small>How policy can make ecosystems more likely.</small>
+	</a>
+	<a href="/book/06-closing-the-loops/">
+		<span>Chapter 6</span>
+		<strong>Closing the Loops</strong>
+		<small>The test of whether outputs become inputs.</small>
+	</a>
+	<a href="/book/07-unresolved-questions/">
+		<span>Interlude</span>
+		<strong>Unresolved Questions</strong>
+		<small>A pause before the concluding argument.</small>
+	</a>
+	<a href="/book/08-question-that-moved/">
+		<span>Chapter 7</span>
+		<strong>The Question That Moved</strong>
+		<small>The answer changes; the responsibility does not.</small>
+	</a>
 </div>
 
 ## Four Concentrations

@@ -84,6 +84,10 @@ body {
 	letter-spacing: 0;
 }
 
+:root[data-theme="light"] .sidebar-content a[aria-current="page"]::after {
+	color: #fff8ef;
+}
+
 :root[data-theme="light"] .sidebar-content a,
 :root[data-theme="light"] .right-sidebar-panel a,
 :root[data-theme="light"] .pagination-links a {
@@ -111,31 +115,6 @@ body {
 
 :root[data-theme="light"] .pagination-links a {
 	background: var(--book-panel);
-}
-
-body::before {
-	content: "";
-	position: fixed;
-	inset: 0 auto auto 0;
-	z-index: 9999;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(90deg, var(--book-maroon), var(--book-gold));
-	transform: scaleX(0);
-	transform-origin: left center;
-}
-
-@supports (animation-timeline: scroll()) {
-	body::before {
-		animation: reading-progress linear both;
-		animation-timeline: scroll(root);
-	}
-}
-
-@keyframes reading-progress {
-	to {
-		transform: scaleX(1);
-	}
 }
 
 .sl-markdown-content {
@@ -205,6 +184,72 @@ body::before {
 	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 72%);
 }
 
+.book-meta {
+	margin: -0.55rem 0 1.4rem;
+	color: color-mix(in srgb, var(--book-ink), transparent 42%);
+	font-family: var(--sl-font);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.book-progress {
+	position: fixed;
+	inset: 0 0 auto;
+	z-index: 10000;
+	pointer-events: none;
+}
+
+.book-progress__track {
+	height: 3px;
+	background: color-mix(in srgb, var(--book-gold), transparent 86%);
+}
+
+.book-progress__track span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, var(--book-maroon), var(--book-gold));
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 120ms linear;
+}
+
+.book-progress__meta {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	padding: 0.45rem 0.6rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--book-panel), transparent 8%);
+	box-shadow: 0 10px 28px color-mix(in srgb, #000, transparent 88%);
+	color: color-mix(in srgb, var(--book-ink), transparent 22%);
+	font-family: var(--sl-font);
+	font-size: 0.72rem;
+	font-weight: 760;
+	letter-spacing: 0.04em;
+	pointer-events: auto;
+}
+
+.book-progress__meta button {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--book-maroon);
+	cursor: pointer;
+	font: inherit;
+}
+
+.book-progress__meta button:hover,
+.book-progress__meta button:focus {
+	text-decoration: underline;
+}
+
 .chapter-kicker,
 .home-kicker {
 	margin: 0 0 1rem;
@@ -270,6 +315,111 @@ body::before {
 .hero-actions a:first-child {
 	background: var(--book-maroon);
 	color: #fff8ef;
+}
+
+.continue-reading {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.45rem 0.8rem;
+	margin: 0 0 2.4rem;
+	padding: 0.85rem 1rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 60%);
+	border-radius: 6px;
+	background: var(--book-panel);
+	font-family: var(--sl-font);
+}
+
+.continue-reading[hidden] {
+	display: none;
+}
+
+.continue-reading span,
+.continue-reading small {
+	color: color-mix(in srgb, var(--book-ink), transparent 42%);
+	font-size: 0.78rem;
+	font-weight: 760;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.continue-reading a {
+	color: var(--book-maroon);
+	font-size: 0.98rem;
+	font-weight: 780;
+	text-decoration: none;
+}
+
+.thesis-diagram {
+	margin: 1rem 0 3.6rem;
+	padding: 1.2rem 0 0;
+	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 62%);
+}
+
+.thesis-diagram h2 {
+	max-width: 34rem;
+	margin: 0 0 1.2rem;
+	padding: 0;
+	border: 0;
+	color: var(--book-ink);
+	font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.75rem);
+	line-height: 1.2;
+}
+
+.thesis-diagram p:last-child {
+	margin: 1rem 0 0;
+	color: color-mix(in srgb, var(--book-ink), transparent 30%);
+	font-family: var(--sl-font);
+	font-size: 0.95rem;
+	font-weight: 680;
+}
+
+.thesis-flow {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 56%);
+	border-radius: 6px;
+	background: color-mix(in srgb, var(--book-gold), transparent 74%);
+	overflow: hidden;
+}
+
+.thesis-flow span {
+	position: relative;
+	display: grid;
+	gap: 0.28rem;
+	min-height: 6.5rem;
+	padding: 1rem;
+	background: var(--book-panel);
+}
+
+.thesis-flow span:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: -0.32rem;
+	top: 50%;
+	z-index: 1;
+	width: 0.64rem;
+	height: 0.64rem;
+	border-top: 1px solid color-mix(in srgb, var(--book-gold), transparent 28%);
+	border-right: 1px solid color-mix(in srgb, var(--book-gold), transparent 28%);
+	background: var(--book-panel);
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.thesis-flow strong {
+	align-self: end;
+	color: var(--book-ink);
+	font-size: 1rem;
+	line-height: 1.15;
+}
+
+.thesis-flow small {
+	color: var(--book-gold);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
 }
 
 .progression {
@@ -363,6 +513,7 @@ body::before {
 }
 
 .reading-path a {
+	position: relative;
 	display: grid;
 	gap: 0.35rem;
 	min-height: 8rem;
@@ -370,6 +521,33 @@ body::before {
 	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
 	border-radius: 6px;
 	color: var(--book-ink);
+}
+
+.reading-path a.is-current,
+.reading-path a.is-last-read {
+	border-color: color-mix(in srgb, var(--book-maroon), transparent 35%);
+	background: color-mix(in srgb, var(--book-maroon), transparent 94%);
+}
+
+.reading-path a.is-current::after,
+.reading-path a.is-last-read::after {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.8rem;
+	color: var(--book-maroon);
+	font-family: var(--sl-font);
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.reading-path a.is-current::after {
+	content: "You are here";
+}
+
+.reading-path a.is-last-read::after {
+	content: "Continue";
 }
 
 .reading-path strong {
@@ -480,6 +658,31 @@ body::before {
 	background: var(--book-panel);
 }
 
+.evidence-note {
+	margin: 1.4rem 0 0;
+	font-family: var(--sl-font);
+	font-size: 0.88rem;
+	line-height: 1.55;
+}
+
+.evidence-note a {
+	color: var(--book-maroon);
+	font-weight: 760;
+	text-decoration-color: color-mix(in srgb, var(--book-maroon), transparent 45%);
+	text-underline-offset: 0.18em;
+}
+
+.sidebar-content a[aria-current="page"]::after {
+	content: "You are here";
+	display: block;
+	margin-top: 0.08rem;
+	color: color-mix(in srgb, var(--sl-color-text-invert), transparent 20%);
+	font-size: 0.64rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
 @media (max-width: 780px) {
 	body {
 		background: var(--book-paper);
@@ -495,6 +698,29 @@ body::before {
 		grid-template-columns: 1fr;
 		gap: 0.8rem;
 		margin-bottom: 2.6rem;
+	}
+
+	.book-progress__meta {
+		right: 0.65rem;
+		bottom: 0.65rem;
+		gap: 0.45rem;
+		font-size: 0.68rem;
+	}
+
+	.thesis-flow {
+		grid-template-columns: 1fr;
+	}
+
+	.thesis-flow span {
+		min-height: 5rem;
+	}
+
+	.thesis-flow span:not(:last-child)::after {
+		right: auto;
+		top: auto;
+		left: 1.2rem;
+		bottom: -0.32rem;
+		transform: rotate(135deg);
 	}
 
 	.progression span:not(:last-child)::after {

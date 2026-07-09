@@ -101,6 +101,8 @@ They represented the creation of entirely new social possibilities.
 
 The access revolution worked.
 
+<p class="evidence-note"><a href="/appendices/evidence-matrix/#chapter-3">Evidence note: sources for the access revolution</a></p>
+
 ---
 
 ## Success Creates New Questions
@@ -270,6 +272,8 @@ How does trust develop between investors, entrepreneurs, researchers and custome
 These questions cannot be answered through institutions alone.
 
 They require ecosystems.
+
+<p class="evidence-note"><a href="/appendices/evidence-matrix/#chapter-3">See the Evidence Matrix for the chapter’s education and ecosystem sources</a></p>
 
 ---
 

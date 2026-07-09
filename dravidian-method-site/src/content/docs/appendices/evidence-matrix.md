@@ -11,7 +11,7 @@ sidebar:
 This book advances an interpretive argument rather than a partisan one. Each chapter combines historical interpretation with publicly verifiable evidence.
 
 <div class="evidence-grid">
-	<section>
+	<section id="chapter-1">
 		<span>Chapter 1</span>
 		<h2>A Recurring Obligation</h2>
 		<p>Periyar confronted concentrated dignity; Anna confronted concentrated ownership; Kalaignar widened educational and institutional participation.</p>
@@ -20,7 +20,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>Self-Respect Movement writings, speeches, Panathottam, higher education expansion, reservation policies, and welfare architecture.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-2">
 		<span>Chapter 2</span>
 		<h2>Anna’s Question: Who Owns?</h2>
 		<p>Panathottam is read as an institutional investigation into companies, banks, insurers, managing agencies, and control.</p>
@@ -29,7 +29,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>The original Tamil text, corporate structures documented by Anna, insurance capital arguments, and comparative political economy literature.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-3">
 		<span>Chapter 3</span>
 		<h2>After Access</h2>
 		<p>Educational participation expanded dramatically, but ownership evolved through a different mechanism.</p>
@@ -38,7 +38,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>Government policy notes, AISHE, Tamil Nadu higher education material, NSSO, Census, academic studies, business history, and ecosystem literature.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-4">
 		<span>Chapter 4</span>
 		<h2>When Ownership Became an Ecosystem</h2>
 		<p>Modern ownership increasingly depends on intangible assets, networks, intellectual property, and ecosystem reproduction.</p>
@@ -47,7 +47,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>Innovation systems literature, OECD and WIPO material, Deep Tech studies, entrepreneurial ecosystem research, and network economics.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-5">
 		<span>Chapter 5</span>
 		<h2>Innovation Architecture</h2>
 		<p>Tamil Nadu’s public policy vocabulary has shifted toward research commercialisation, startups, Deep Tech, and global innovation networks.</p>
@@ -56,7 +56,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>StartupTN reports, iTNT Hub material, Deep Tech policy, IIT Madras Research Park reports, TANSEED, TNGSS, Umagine, IGES, Knowledge City announcements, and partnership records.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-6">
 		<span>Chapter 6</span>
 		<h2>Closing the Loops</h2>
 		<p>The central test is whether today’s public and private outputs become tomorrow’s founders, investors, mentors, and institutions.</p>
@@ -65,7 +65,7 @@ This book advances an interpretive argument rather than a partisan one. Each cha
 			<p>Zoho, Freshworks, IIT Madras Research Park, StartupTN, TN-RISE, SC/ST Startup Fund, case studies, and comparative programme literature.</p>
 		</details>
 	</section>
-	<section>
+	<section id="chapter-7">
 		<span>Chapter 7</span>
 		<h2>The Question That Moved</h2>
 		<p>The concluding claim returns to the recurring obligation: each age must identify what has become concentrated and widen participation again.</p>
