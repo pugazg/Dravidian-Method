@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="The Dravidian Method">
-  <rect width="128" height="128" rx="18" fill="#7b1f31"/>
-  <path d="M28 28h72v10H28V28Zm0 62h72v10H28V90Z" fill="#d6a955"/>
-  <path d="M33 48h18c16 0 27 8 27 20s-11 20-27 20H33V48Zm16 10v20h3c7 0 12-4 12-10s-5-10-12-10h-3Zm36-10h10v40H85V48Z" fill="#fff8ef"/>
+  <rect width="128" height="128" rx="18" fill="#fafafa"/>
+  <path d="M28 36h48" stroke="#7b1f31" stroke-width="10" stroke-linecap="round"/>
+  <path d="M28 64h64" stroke="#aa7a2a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M28 92h80" stroke="#111111" stroke-width="10" stroke-linecap="round"/>
 </svg>

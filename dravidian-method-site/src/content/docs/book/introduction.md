@@ -1,6 +1,9 @@
 ---
 title: "Introduction"
 description: "The question behind a century of changing politics and public institutions."
+sidebar:
+  order: 2
+  label: "Introduction"
 ---
 <p class="chapter-kicker">The Question Behind a Century</p>
 

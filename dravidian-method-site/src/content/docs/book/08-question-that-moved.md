@@ -1,6 +1,9 @@
 ---
 title: "The Question That Moved"
 description: "The concluding pattern: the answer changes, the responsibility does not."
+sidebar:
+  order: 10
+  label: "7. The Question That Moved"
 ---
 <p class="chapter-kicker">Part III · Chapter 7</p>
 

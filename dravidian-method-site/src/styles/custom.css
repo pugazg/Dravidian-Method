@@ -18,6 +18,7 @@
 	--book-maroon: #7b1f31;
 	--book-ink: #111111;
 	--book-paper: #fafafa;
+	--book-panel: #fffdf8;
 	--sl-content-width: 48rem;
 	--sl-sidebar-width: 18rem;
 }
@@ -39,6 +40,7 @@
 	--book-maroon: #d7798a;
 	--book-ink: #f7efe4;
 	--book-paper: #11100e;
+	--book-panel: #171310;
 }
 
 html {
@@ -81,7 +83,7 @@ body::before {
 .sl-markdown-content {
 	font-family: var(--book-serif);
 	font-size: clamp(1.06rem, calc(1rem + 0.18rem), 1.18rem);
-	line-height: 1.85;
+	line-height: 1.9;
 }
 
 .sl-markdown-content p,
@@ -97,10 +99,17 @@ body::before {
 .sl-markdown-content .chapter-kicker,
 .home-kicker,
 .home-lede,
+.home-subtitle,
+.core-line,
 .hero-actions,
-.method-map,
+.progression,
+.concentration-grid,
 .reading-path,
-.evidence-grid {
+.evidence-grid,
+.source-grid,
+.reading-grid,
+.appendix-preview,
+.about-panel {
 	font-family: var(--sl-font);
 }
 
@@ -120,9 +129,12 @@ body::before {
 }
 
 .sl-markdown-content blockquote {
-	margin: 2rem 0;
+	margin: 2.4rem 0;
+	padding: 1.2rem 1.35rem;
+	border: 1px solid color-mix(in srgb, var(--book-maroon), transparent 74%);
 	border-inline-start: 4px solid var(--book-maroon);
-	background: color-mix(in srgb, var(--book-maroon), transparent 95%);
+	border-radius: 6px;
+	background: color-mix(in srgb, var(--book-maroon), transparent 94%);
 	color: var(--book-ink);
 	font-family: var(--book-serif);
 	font-size: clamp(1.3rem, calc(1.18rem + 0.28rem), 1.55rem);
@@ -145,20 +157,43 @@ body::before {
 	text-transform: uppercase;
 }
 
+.book-hero {
+	margin-bottom: 2rem;
+}
+
 .home-lede {
 	max-width: 22ch;
 	margin: 0.75rem 0 1.25rem;
 	color: var(--book-ink);
-	font-size: 2.75rem;
+	font-size: clamp(2.35rem, 2rem + 1.1vw, 3.2rem);
 	font-weight: 720;
 	line-height: 1.08;
+}
+
+.home-subtitle {
+	max-width: 45rem;
+	margin: 0 0 1.35rem;
+	color: color-mix(in srgb, var(--book-ink), transparent 22%);
+	font-size: 1.05rem;
+	line-height: 1.75;
+}
+
+.core-line {
+	max-width: max-content;
+	margin: 1.5rem 0 0;
+	padding: 0.85rem 1rem;
+	border-inline-start: 3px solid var(--book-gold);
+	background: color-mix(in srgb, var(--book-gold), transparent 90%);
+	color: var(--book-ink);
+	font-size: 1.02rem;
+	font-weight: 760;
 }
 
 .hero-actions {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.75rem;
-	margin: 1.6rem 0 2.8rem;
+	margin: 1.8rem 0 2.4rem;
 }
 
 .hero-actions a {
@@ -179,33 +214,68 @@ body::before {
 	color: #fff8ef;
 }
 
-.method-map {
+.progression {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.65rem;
+	margin: 1rem 0 3.8rem;
+	color: color-mix(in srgb, var(--book-ink), transparent 28%);
+	font-size: 0.86rem;
+	font-weight: 760;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.progression span {
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.progression span:not(:last-child)::after {
+	content: "";
+	display: inline-block;
+	width: 2.2rem;
+	height: 1px;
+	margin-inline-start: 0.65rem;
+	background: color-mix(in srgb, var(--book-gold), transparent 42%);
+}
+
+.concentration-grid {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1px;
-	margin: 2rem 0 4rem;
+	margin: 1.5rem 0 3.2rem;
 	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 48%);
 	background: color-mix(in srgb, var(--book-gold), transparent 70%);
 }
 
-.method-map a,
+.concentration-grid a,
 .reading-path a,
-.evidence-grid section {
-	background: color-mix(in srgb, var(--book-paper), var(--book-gold) 4%);
+.evidence-grid section,
+.source-grid section,
+.reading-grid section,
+.appendix-preview a,
+.about-panel {
+	background: var(--book-panel);
 	text-decoration: none;
 }
 
-.method-map a {
+.concentration-grid a {
 	display: grid;
 	gap: 0.55rem;
-	min-height: 11.5rem;
+	min-height: 12.5rem;
 	padding: 1rem;
 	color: var(--book-ink);
 }
 
-.method-map span,
+.concentration-grid span,
 .reading-path span,
-.evidence-grid span {
+.evidence-grid span,
+.source-grid span,
+.reading-grid span,
+.appendix-preview span {
 	color: var(--book-gold);
 	font-size: 0.72rem;
 	font-weight: 800;
@@ -213,14 +283,15 @@ body::before {
 	text-transform: uppercase;
 }
 
-.method-map strong {
+.concentration-grid strong {
 	align-self: end;
 	font-size: 1.45rem;
 	line-height: 1;
 }
 
-.method-map small,
-.reading-path small {
+.concentration-grid small,
+.reading-path small,
+.appendix-preview small {
 	color: color-mix(in srgb, var(--book-ink), transparent 28%);
 	font-size: 0.86rem;
 	line-height: 1.45;
@@ -261,7 +332,9 @@ body::before {
 	border-radius: 6px;
 }
 
-.evidence-grid h2 {
+.evidence-grid h2,
+.source-grid h2,
+.reading-grid h2 {
 	margin: 0.35rem 0 0.65rem;
 	padding: 0;
 	border: 0;
@@ -288,28 +361,105 @@ body::before {
 	font-weight: 800;
 }
 
+.about-panel {
+	margin: 1.25rem 0 3rem;
+	padding: 1.2rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 60%);
+	border-radius: 6px;
+}
+
+.about-panel p {
+	margin: 0 0 0.8rem;
+	font-family: var(--book-serif);
+	line-height: 1.75;
+}
+
+.about-panel a,
+.appendix-preview a {
+	color: var(--book-maroon);
+	font-weight: 760;
+	text-decoration: none;
+}
+
+.appendix-preview,
+.source-grid,
+.reading-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 1.25rem 0 3rem;
+}
+
+.appendix-preview a,
+.source-grid section,
+.reading-grid section {
+	display: grid;
+	gap: 0.5rem;
+	padding: 1rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
+	border-radius: 6px;
+	color: var(--book-ink);
+}
+
+.appendix-preview strong {
+	color: var(--book-ink);
+	font-size: 1.12rem;
+}
+
+.source-grid ul,
+.reading-grid ul {
+	margin: 0.3rem 0 0;
+	padding-inline-start: 1.05rem;
+	font-family: var(--book-serif);
+	line-height: 1.65;
+}
+
+.reading-sequence {
+	margin-top: 1rem;
+	padding: 1rem 1rem 1rem 2.3rem;
+	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
+	border-radius: 6px;
+	background: var(--book-panel);
+}
+
 @media (max-width: 780px) {
 	body {
 		background: var(--book-paper);
 	}
 
 	.sl-markdown-content h1 {
-		max-width: 11ch;
-		font-size: 3rem;
+		max-width: 100%;
+		font-size: 2.45rem;
 	}
 
-	.method-map,
+	.progression {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.8rem;
+		margin-bottom: 2.6rem;
+	}
+
+	.progression span:not(:last-child)::after {
+		width: 1px;
+		height: 1.2rem;
+		margin: 0.45rem 0 0;
+	}
+
+	.concentration-grid,
 	.reading-path,
-	.evidence-grid {
+	.evidence-grid,
+	.source-grid,
+	.reading-grid,
+	.appendix-preview {
 		grid-template-columns: 1fr;
 	}
 
 	.home-lede {
 		max-width: 100%;
-		font-size: 2.25rem;
+		font-size: 2rem;
 	}
 
-	.method-map a {
+	.concentration-grid a {
 		min-height: 8.5rem;
 	}
 }

@@ -1,6 +1,9 @@
 ---
 title: "Preface"
 description: "The recurring question at the heart of the Dravidian method."
+sidebar:
+  order: 1
+  label: "Preface"
 ---
 > “Every generation inherits the answers of the previous generation. It must also discover the questions that previous generations could not ask.”
 

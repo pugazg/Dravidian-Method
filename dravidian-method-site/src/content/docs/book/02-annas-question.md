@@ -1,6 +1,9 @@
 ---
 title: "Anna’s Question: Who Owns?"
 description: "Reading Panathottam as an institutional investigation into ownership."
+sidebar:
+  order: 4
+  label: "2. Anna’s Question"
 ---
 <p class="chapter-kicker">Part I · Chapter 2</p>
 

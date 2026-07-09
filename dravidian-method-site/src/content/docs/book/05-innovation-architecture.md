@@ -1,6 +1,9 @@
 ---
 title: "Can a State Build an Innovation Architecture?"
 description: "The public architecture that may help ecosystems become more likely."
+sidebar:
+  order: 7
+  label: "5. Innovation Architecture"
 ---
 <p class="chapter-kicker">Part III · Chapter 5</p>
 

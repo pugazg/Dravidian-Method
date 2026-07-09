@@ -1,6 +1,9 @@
 ---
 title: "Closing the Loops"
 description: "The test of whether today’s outputs become tomorrow’s inputs."
+sidebar:
+  order: 8
+  label: "6. Closing the Loops"
 ---
 <p class="chapter-kicker">Part III · Chapter 6</p>
 

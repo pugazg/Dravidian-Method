@@ -1,13 +1,16 @@
 ---
 title: Evidence Matrix
 description: The main claims in each chapter and the public evidence used to examine them.
+sidebar:
+  order: 1
+  label: "Evidence Matrix"
 ---
 
-<div className="chapter-kicker">{'Appendix A'}</div>
+<p class="chapter-kicker">Appendix A</p>
 
 This book advances an interpretive argument rather than a partisan one. Each chapter combines historical interpretation with publicly verifiable evidence.
 
-<div className="evidence-grid">
+<div class="evidence-grid">
 	<section>
 		<span>Chapter 1</span>
 		<h2>A Recurring Obligation</h2>

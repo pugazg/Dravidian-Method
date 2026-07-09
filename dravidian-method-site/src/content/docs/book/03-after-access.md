@@ -1,6 +1,9 @@
 ---
 title: "After Access"
 description: "How Tamil Nadu’s access revolution made the ownership question more interesting."
+sidebar:
+  order: 5
+  label: "3. After Access"
 ---
 <p class="chapter-kicker">Part II · The Access Revolution · Chapter 3</p>
 

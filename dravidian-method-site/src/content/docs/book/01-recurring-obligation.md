@@ -1,6 +1,9 @@
 ---
 title: "A Recurring Obligation"
 description: "Periyar, Anna, Kalaignar, and the recurring obligation to widen participation."
+sidebar:
+  order: 3
+  label: "1. A Recurring Obligation"
 ---
 <p class="chapter-kicker">Part I · The First Concentration · Chapter 1</p>
 

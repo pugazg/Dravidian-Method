@@ -1,6 +1,9 @@
 ---
 title: "When Ownership Became an Ecosystem"
 description: "Why ownership now grows through networks, knowledge, capital, and trust."
+sidebar:
+  order: 6
+  label: "4. Ownership as Ecosystem"
 ---
 <p class="chapter-kicker">Part II · Chapter 4</p>
 
