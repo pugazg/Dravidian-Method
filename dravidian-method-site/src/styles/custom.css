@@ -117,6 +117,19 @@ body {
 	background: var(--book-panel);
 }
 
+.sidebar-content a {
+	font-size: 0.8125rem;
+}
+
+.sidebar-content .large {
+	font-size: 0.9rem;
+}
+
+.right-sidebar-panel h2 {
+	color: color-mix(in srgb, var(--book-ink), transparent 8%);
+	font-weight: 650;
+}
+
 .sl-markdown-content {
 	font-family: var(--book-serif);
 	font-size: clamp(1.06rem, calc(1rem + 0.18rem), 1.18rem);
@@ -126,6 +139,7 @@ body {
 .sl-markdown-content p,
 .sl-markdown-content li {
 	color: color-mix(in srgb, var(--book-ink), transparent 12%);
+	font-weight: 430;
 }
 
 .sl-markdown-content h1,
@@ -167,7 +181,7 @@ body {
 
 .sl-markdown-content blockquote {
 	margin: 2.4rem 0;
-	padding: 1.2rem 1.35rem;
+	padding: 1.7rem 1.85rem;
 	border: 1px solid color-mix(in srgb, var(--book-maroon), transparent 74%);
 	border-inline-start: 4px solid var(--book-maroon);
 	border-radius: 6px;
@@ -266,11 +280,11 @@ body {
 
 .home-lede {
 	max-width: 22ch;
-	margin: 0.75rem 0 1.25rem;
+	margin: 0.7rem 0 1.4rem;
 	color: var(--book-ink);
-	font-size: clamp(2.35rem, 2rem + 1.1vw, 3.2rem);
-	font-weight: 720;
-	line-height: 1.08;
+	font-size: clamp(2.05rem, 1.78rem + 0.95vw, 2.78rem);
+	font-weight: 700;
+	line-height: 1.1;
 }
 
 .home-subtitle {
@@ -474,7 +488,7 @@ body {
 	display: grid;
 	gap: 0.55rem;
 	min-height: 12.5rem;
-	padding: 1rem;
+	padding: 1.45rem 1rem;
 	color: var(--book-ink);
 }
 
@@ -494,6 +508,7 @@ body {
 .concentration-grid strong {
 	align-self: end;
 	font-size: 1.45rem;
+	font-weight: 820;
 	line-height: 1;
 }
 
@@ -517,7 +532,7 @@ body {
 	display: grid;
 	gap: 0.35rem;
 	min-height: 8rem;
-	padding: 1rem;
+	padding: 1.55rem 1rem;
 	border: 1px solid color-mix(in srgb, var(--book-gold), transparent 58%);
 	border-radius: 6px;
 	color: var(--book-ink);
@@ -740,10 +755,11 @@ body {
 
 	.home-lede {
 		max-width: 100%;
-		font-size: 2rem;
+		font-size: 1.85rem;
 	}
 
 	.concentration-grid a {
 		min-height: 8.5rem;
+		padding-block: 1.35rem;
 	}
 }
