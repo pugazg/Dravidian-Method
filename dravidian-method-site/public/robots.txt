@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dravidian-method.vercel.app/sitemap.xml
+Sitemap: https://dravidian-method.vercel.app/sitemap-index.xml
